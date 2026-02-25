@@ -50,7 +50,7 @@ function HeroSection() {
                     {/* Hero image */}
                     <div className="hero__image-container">
                         <img
-                            src="/imgs/hero_man_webp.png"
+                            src="/imgs/chatgpt_image_19_de_fev__de_2026__12_51_44_1.png"
                             alt="Profissional da QueirozTech sorrindo"
                             className="hero__image"
                         />
