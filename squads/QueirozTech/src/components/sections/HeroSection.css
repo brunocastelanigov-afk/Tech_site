@@ -5,7 +5,7 @@
 
 .hero {
     width: 100%;
-    min-height: 669px;
+    min-height: 651px;
     background: var(--color-white);
     display: flex;
     align-items: center;
@@ -185,7 +185,7 @@
 @media (max-width: 1024px) {
     .hero {
         min-height: auto;
-        padding: 60px 0;
+        padding: 60px 0 0;
     }
 
     .hero__inner {
@@ -244,7 +244,7 @@
    ------------------------------------------------------- */
 @media (max-width: 768px) {
     .hero {
-        padding: 40px 0;
+        padding: 40px 0 0;
     }
 
     .hero__inner {

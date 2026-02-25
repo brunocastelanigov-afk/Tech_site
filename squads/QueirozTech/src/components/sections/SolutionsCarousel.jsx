@@ -54,6 +54,7 @@ function SolutionsCarousel() {
     const visibleCount = windowWidth <= 768 ? 1 : 3
 
     const maxIndex = slides.length - visibleCount
+    const pagesCount = maxIndex + 1
 
     // Auto-play: advance every 5s, pause on hover
     useEffect(() => {
@@ -150,7 +151,7 @@ function SolutionsCarousel() {
 
                 {/* Dots */}
                 <div className="solutions__dots">
-                    {slides.map((_, i) => (
+                    {Array.from({ length: pagesCount }).map((_, i) => (
                         <button
                             key={i}
                             className={`solutions__dot${i === current ? ' solutions__dot--active' : ''}`}

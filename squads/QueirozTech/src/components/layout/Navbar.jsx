@@ -23,10 +23,8 @@ function Navbar() {
                 {/* Logo — center */}
                 <a href="#" className="navbar__logo">
                     <img
-                        src="/imgs/queiroztech_logo_preto_letrapreta.png"
+                        src="/imgs/QUEIROZTECH_Logo_Preto_letraPreta.svg"
                         alt="QueirozTech"
-                        width="156"
-                        height="72"
                     />
                 </a>
 

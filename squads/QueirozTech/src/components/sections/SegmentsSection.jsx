@@ -36,6 +36,7 @@ function SegmentsSection() {
     const visibleCount = windowWidth <= 768 ? 1 : 3
 
     const maxIndex = segmentSlides.length - visibleCount
+    const pagesCount = maxIndex + 1
 
     // Auto-play: advance every 5s, pause on hover
     useEffect(() => {
@@ -144,7 +145,7 @@ function SegmentsSection() {
 
                 {/* Dots */}
                 <div className="segments__dots">
-                    {segmentSlides.map((_, i) => (
+                    {Array.from({ length: pagesCount }).map((_, i) => (
                         <button
                             key={i}
                             className={`segments__dot${i === current ? ' segments__dot--active' : ''}`}

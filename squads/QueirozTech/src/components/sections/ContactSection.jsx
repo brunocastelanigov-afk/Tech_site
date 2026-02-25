@@ -3,7 +3,7 @@ import './ContactSection.css'
 
 function ContactSection() {
     const { ref: animRef, isVisible } = useScrollAnimation()
-    const dots = Array.from({ length: 15 }, (_, i) => (
+    const dots = Array.from({ length: 11 }, (_, i) => (
         <span key={i} className="contact__dot" />
     ))
 
@@ -14,16 +14,15 @@ function ContactSection() {
 
             <div className="contact__inner">
                 <div className="contact__content">
-                    {/* Hero image + decorations */}
                     <div className="contact__hero">
                         <div className="contact__rect contact__rect--back" />
-                        <div className="contact__rect contact__rect--front" />
+                        <div className="contact__dots">{dots}</div>
                         <img
                             src="/imgs/chatgpt_image_22_de_fev__de_2026__16_46_57_1.png"
                             alt="Equipe QueirozTech"
                             className="contact__hero-image"
                         />
-                        <div className="contact__dots">{dots}</div>
+                        <div className="contact__rect contact__rect--front" />
                     </div>
 
                     {/* Text content */}

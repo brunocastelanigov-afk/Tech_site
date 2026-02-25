@@ -57,7 +57,7 @@
    Card
    ------------------------------------------------------- */
 .solutions__card {
-    min-width: var(--slide-width, calc(100% / 3));
+    flex: 0 0 var(--slide-width, calc(100% / 3));
     padding: 0 15px;
     display: flex;
     flex-direction: column;
@@ -208,6 +208,34 @@
 /* ============================================================
    RESPONSIVE DESIGN (TABLET & MOBILE)
    ============================================================ */
+
+/* -------------------------------------------------------
+   Viewports com altura reduzida (ex.: ~785px)
+   ------------------------------------------------------- */
+@media (max-height: 800px) {
+    .solutions {
+        padding: 40px 20px;
+        min-height: auto;
+    }
+
+    .solutions__header {
+        margin-bottom: 32px;
+    }
+
+    .solutions__card-image-wrap {
+        width: 220px;
+        height: 220px;
+    }
+
+    .solutions__nav {
+        margin-top: 24px;
+        gap: 24px;
+    }
+
+    .solutions__cta {
+        margin-top: 24px;
+    }
+}
 
 /* -------------------------------------------------------
    Mobile (max-width: 768px)

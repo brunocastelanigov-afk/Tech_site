@@ -5,26 +5,17 @@ function AboutSection() {
     const { ref: animRef, isVisible } = useScrollAnimation()
     return (
         <section className={`about scroll-animate${isVisible ? ' scroll-animate--visible' : ''}`} id="sobre" ref={animRef}>
-            {/* Background image + overlay */}
             <div className="about__bg">
                 <img
                     className="about__bg-image"
-                    src="/imgs/frame_106_webp.png"
-                    alt="Textura abstrata de fundo"
+                    src="/imgs/chatgpt_image_16_de_fev__de_2026__09_12_48_1.png"
+                    alt=""
                     aria-hidden="true"
                 />
                 <div className="about__bg-overlay" />
             </div>
 
             <div className="about__inner">
-                {/* Secondary image (left) */}
-                <img
-                    className="about__image"
-                    src="/imgs/chatgpt_image_16_de_fev__de_2026__09_12_48_1.png"
-                    alt="Escritório moderno da QueirozTech"
-                />
-
-                {/* Text content (right) */}
                 <div className="about__content">
                     <span className="about__label">Sobre nós</span>
                     <h2 className="about__headline">QueirozTech</h2>

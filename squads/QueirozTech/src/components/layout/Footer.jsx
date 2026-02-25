@@ -21,7 +21,7 @@ function Footer() {
                         </a>
                         <div className="footer__logo">
                             <img
-                                src="/imgs/queiroztech_logo_preto_letrapreta.png"
+                                src="/imgs/QUEIROZTECH_Logo_Preto_letraPreta.svg"
                                 alt="QueirozTech"
                             />
                         </div>

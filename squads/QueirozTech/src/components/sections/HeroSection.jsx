@@ -3,10 +3,6 @@ import './HeroSection.css'
 
 function HeroSection() {
     const { ref: animRef, isVisible } = useScrollAnimation()
-    // Generate 15 vertical dots
-    const dots = Array.from({ length: 15 }, (_, i) => (
-        <span key={i} className="hero__dot" />
-    ))
 
     return (
         <section className={`hero scroll-animate${isVisible ? ' scroll-animate--visible' : ''}`} id="hero" ref={animRef}>
@@ -45,7 +41,6 @@ function HeroSection() {
                     <div className="hero__ellipse hero__ellipse--md" />
                     <div className="hero__ellipse hero__ellipse--sm" />
                     <div className="hero__gradient-rect" />
-                    <div className="hero__dots">{dots}</div>
 
                     {/* Hero image */}
                     <div className="hero__image-container">
