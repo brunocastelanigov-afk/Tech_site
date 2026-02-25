@@ -1,0 +1,39 @@
+# ==============================================================================
+# QueirozTech SPA Routing Rules
+# ==============================================================================
+#
+# INSTRUÇÕES:
+# Cole estas regras no arquivo .htaccess da RAIZ do WordPress.
+# Elas devem ficar ANTES das regras do WordPress existentes.
+#
+# O que faz:
+# - Permite que o React Router funcione com URLs como /contato
+# - Qualquer URL que não seja um arquivo ou diretório real é redirecionada
+#   para o index.php do WordPress, que por sua vez carrega o index.php do tema
+# - As regras do WP já fazem isso por padrão, então normalmente NÃO precisa
+#   adicionar nada! O WordPress já redireciona 404s para o index.php.
+#
+# IMPORTANTE:
+# O WordPress padrão já inclui regras de rewrite que enviam tudo para index.php.
+# O functions.php do tema intercepta com status 200 (ao invés de 404).
+# Portanto, na maioria dos casos, NÃO é necessário editar o .htaccess!
+#
+# Caso as rotas /contato retornem 404, adicione estas regras ANTES do bloco
+# # BEGIN WordPress:
+#
+# ==============================================================================
+
+# BEGIN QueirozTech SPA
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# Se o arquivo existe fisicamente, servir diretamente
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Rotas da SPA React → index.php do WordPress
+RewriteRule ^contato/?$ /index.php [L]
+</IfModule>
+# END QueirozTech SPA

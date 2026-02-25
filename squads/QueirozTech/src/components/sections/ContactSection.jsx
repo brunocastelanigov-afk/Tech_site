@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
+import { assetUrl } from '../../utils/assetUrl'
 import './ContactSection.css'
 
 function ContactSection() {
@@ -19,7 +20,7 @@ function ContactSection() {
                         <div className="contact__rect contact__rect--back" />
                         <div className="contact__dots">{dots}</div>
                         <img
-                            src="/imgs/chatgpt_image_22_de_fev__de_2026__16_46_57_1.png"
+                            src={assetUrl('imgs/chatgpt_image_22_de_fev__de_2026__16_46_57_1.png')}
                             alt="Equipe QueirozTech"
                             className="contact__hero-image"
                         />

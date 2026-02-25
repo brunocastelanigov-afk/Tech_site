@@ -1,0 +1,35 @@
+/*
+Theme Name: QueirozTech
+Theme URI: https://queiroztech.com
+Author: QueirozTech
+Author URI: https://queiroztech.com
+Description: Tema customizado QueirozTech — SPA React embutida com Vite. Mais de 20 anos melhorando o mercado de tecnologia.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 7.4
+License: Proprietary
+License URI: https://queiroztech.com
+Text Domain: queiroztech
+Tags: one-column, custom-logo, full-width-template
+*/
+
+/* ============================================
+   WordPress Default Overrides
+   Evita conflitos entre estilos do WP e React
+   ============================================ */
+
+/* Remove margens do WP admin bar quando logado */
+html {
+  margin-top: 0 !important;
+}
+
+#wpadminbar {
+  display: none !important;
+}
+
+/* O React controla todo o layout */
+body {
+  margin: 0;
+  padding: 0;
+}

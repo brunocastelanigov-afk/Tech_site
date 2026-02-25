@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { assetUrl } from '../../utils/assetUrl'
 import './Footer.css'
 
 function Footer() {
@@ -22,7 +23,7 @@ function Footer() {
                         </Link>
                         <div className="footer__logo">
                             <img
-                                src="/imgs/QUEIROZTECH_Logo_Preto_letraPreta.svg"
+                                src={assetUrl('imgs/QUEIROZTECH_Logo_Preto_letraPreta.svg')}
                                 alt="QueirozTech"
                             />
                         </div>

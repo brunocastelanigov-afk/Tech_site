@@ -1,4 +1,5 @@
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
+import { assetUrl } from '../../utils/assetUrl'
 import './PartnersSection.css'
 
 const partnersRow1 = [
@@ -23,7 +24,7 @@ const partnersRow3 = [
 const PartnerLogo = ({ partner }) => (
     <div className="partners__logo" style={{ opacity: partner.opacity }}>
         <img
-            src={`/imgs/${partner.file}`}
+            src={assetUrl(`imgs/${partner.file}`)}
             alt={`${partner.name} Logo`}
             style={{ width: partner.width, height: partner.height }}
         />

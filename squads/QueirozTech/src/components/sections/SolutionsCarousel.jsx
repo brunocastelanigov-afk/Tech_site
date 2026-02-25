@@ -1,11 +1,13 @@
 import { useState, useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 import { useWindowWidth } from '../../hooks/useWindowWidth'
+import { assetUrl } from '../../utils/assetUrl'
 import './SolutionsCarousel.css'
 
 const baseSlides = [
     {
-        image: '/imgs/___unlock_growth_with_smart_business_loans_1.png',
+        image: assetUrl('imgs/___unlock_growth_with_smart_business_loans_1.png'),
         title: 'Parcerias com Distribuidoras & Fabricantes de Tecnologia',
         descriptionItems: [
             'Representação comercial;',
@@ -16,7 +18,7 @@ const baseSlides = [
         ],
     },
     {
-        image: '/imgs/listamos_30_empregos_bem_pagos_e_sem_curso_superior_1.png',
+        image: assetUrl('imgs/listamos_30_empregos_bem_pagos_e_sem_curso_superior_1.png'),
         title: 'Consultoria em Tecnologia',
         descriptionItems: [
             'Transformação digital;',
@@ -30,7 +32,7 @@ const baseSlides = [
         ],
     },
     {
-        image: '/imgs/num_rique_dossouhoui_p_1.png',
+        image: assetUrl('imgs/num_rique_dossouhoui_p_1.png'),
         title: 'Consultoria para Licitações e Governo',
         descriptionItems: [
             'Construção de soluções técnicas;',
@@ -176,7 +178,7 @@ function SolutionsCarousel() {
             </div>
 
             {/* CTA */}
-            <a href="#contato" className="solutions__cta">
+            <Link to="/contato" className="solutions__cta">
                 Entrar em contato
                 <svg
                     className="solutions__cta-icon"
@@ -192,7 +194,7 @@ function SolutionsCarousel() {
                         strokeLinejoin="round"
                     />
                 </svg>
-            </a>
+            </Link>
         </section>
     )
 }

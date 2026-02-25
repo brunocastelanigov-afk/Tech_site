@@ -1,3 +1,4 @@
+import { assetUrl } from '../../utils/assetUrl'
 import './ContactFormPage.css'
 
 function ContactFormPage() {
@@ -6,7 +7,7 @@ function ContactFormPage() {
             <section className="contact-form-page__panel">
                 <img
                     className="contact-form-page__background-logo"
-                    src="/imgs/QUEIROZTECH_ícone_branco_.svg"
+                    src={assetUrl('imgs/QUEIROZTECH_ícone_branco_.svg')}
                     alt=""
                     aria-hidden="true"
                 />

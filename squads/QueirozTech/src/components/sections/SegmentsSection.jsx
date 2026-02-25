@@ -1,23 +1,24 @@
 import { useState, useEffect, useRef } from 'react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 import { useWindowWidth } from '../../hooks/useWindowWidth'
+import { assetUrl } from '../../utils/assetUrl'
 import './SegmentsSection.css'
 
 const baseSlides = [
     {
-        image: '/imgs/___unlock_growth_with_smart_business_loans_1.png',
+        image: assetUrl('imgs/___unlock_growth_with_smart_business_loans_1.png'),
         title: 'Distribuidoras de TI',
         description:
             'Apoiamos distribuidoras de TI na evolução de suas operações por meio da integração de sistemas e otimização de fluxos comerciais e logísticos. Nossas soluções tecnológicas ampliam eficiência, competitividade e garantem crescimento com segurança e escalabilidade.',
     },
     {
-        image: '/imgs/listamos_30_empregos_bem_pagos_e_sem_curso_superior_1.png',
+        image: assetUrl('imgs/listamos_30_empregos_bem_pagos_e_sem_curso_superior_1.png'),
         title: 'Setor Público',
         description:
             'Atuamos ao lado do setor público na modernização de processos, digitalização de serviços e aumento da eficiência operacional.',
     },
     {
-        image: '/imgs/num_rique_dossouhoui_p_1.png',
+        image: assetUrl('imgs/num_rique_dossouhoui_p_1.png'),
         title: 'Varejo e e-commerce',
         description:
             'Atuamos ao lado do varejo e e-commerce otimizando operações, integrando plataformas e melhorando a experiência do cliente. Implementamos soluções tecnológicas que ampliam a eficiência, fortalecem a presença digital e impulsionam resultados de forma segura e escalável.',

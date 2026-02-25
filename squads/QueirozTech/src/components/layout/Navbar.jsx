@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { assetUrl } from '../../utils/assetUrl'
 import './Navbar.css'
 
 function Navbar() {
@@ -23,7 +25,7 @@ function Navbar() {
                 {/* Logo — center */}
                 <a href="#" className="navbar__logo">
                     <img
-                        src="/imgs/QUEIROZTECH_Logo_Preto_letraPreta.svg"
+                        src={assetUrl('imgs/QUEIROZTECH_Logo_Preto_letraPreta.svg')}
                         alt="QueirozTech"
                     />
                 </a>
@@ -41,9 +43,9 @@ function Navbar() {
                 </button>
 
                 {/* CTA — right */}
-                <a href="#contato" className="navbar__cta">
+                <Link to="/contato" className="navbar__cta">
                     Entrar em contato
-                </a>
+                </Link>
             </div>
 
             {/* Mobile Menu Overlay */}
@@ -56,9 +58,9 @@ function Navbar() {
                         <li><a href="#blog" onClick={closeMenu}>Blog</a></li>
                     </ul>
                 </nav>
-                <a href="#contato" className="navbar__mobile-cta" onClick={closeMenu}>
+                <Link to="/contato" className="navbar__mobile-cta" onClick={closeMenu}>
                     Entrar em contato
-                </a>
+                </Link>
             </div>
         </header>
     )

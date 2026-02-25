@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
+import { assetUrl } from '../../utils/assetUrl'
 import './BrandSection.css'
 
 function BrandSection() {
@@ -19,7 +20,7 @@ function BrandSection() {
                     {/* Logo */}
                     <div className="brand__logo-wrap">
                         <img
-                            src="/imgs/queiroztech_logo_preto_letrapreta.png"
+                            src={assetUrl('imgs/queiroztech_logo_preto_letrapreta.png')}
                             alt="QueirozTech Logo"
                             className="brand__logo"
                         />

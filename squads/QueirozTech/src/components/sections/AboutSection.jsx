@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
+import { assetUrl } from '../../utils/assetUrl'
 import './AboutSection.css'
 
 function AboutSection() {
@@ -8,7 +10,7 @@ function AboutSection() {
             <div className="about__bg">
                 <img
                     className="about__bg-image"
-                    src="/imgs/chatgpt_image_16_de_fev__de_2026__09_12_48_1.png"
+                    src={assetUrl('imgs/chatgpt_image_16_de_fev__de_2026__09_12_48_1.png')}
                     alt=""
                     aria-hidden="true"
                 />
@@ -35,7 +37,7 @@ function AboutSection() {
                             <p className="about__text">
                                 Os sócios fundadores da Queiroz Tech têm mais de 20 anos de experiência no Setor de TI e Comunicações.
                             </p>
-                            <a href="#contato" className="about__cta">
+                            <Link to="/contato" className="about__cta">
                                 Saber mais
                                 <svg
                                     className="about__cta-icon"
@@ -51,7 +53,7 @@ function AboutSection() {
                                         strokeLinejoin="round"
                                     />
                                 </svg>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

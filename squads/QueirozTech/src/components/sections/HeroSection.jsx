@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
+import { assetUrl } from '../../utils/assetUrl'
 import './HeroSection.css'
 
 function HeroSection() {
@@ -15,7 +17,7 @@ function HeroSection() {
                     <p className="hero__subtitle">
                         Transformando tecnologia em resultado. Parcerias, consultoria e investimento para acelerar seu negócio.
                     </p>
-                    <a href="#contato" className="hero__cta">
+                    <Link to="/contato" className="hero__cta">
                         Entrar em contato
                         <svg
                             className="hero__cta-icon"
@@ -31,7 +33,7 @@ function HeroSection() {
                                 strokeLinejoin="round"
                             />
                         </svg>
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Image Column + Decorations */}
@@ -45,7 +47,7 @@ function HeroSection() {
                     {/* Hero image */}
                     <div className="hero__image-container">
                         <img
-                            src="/imgs/chatgpt_image_19_de_fev__de_2026__12_51_44_1.png"
+                            src={assetUrl('imgs/chatgpt_image_19_de_fev__de_2026__12_51_44_1.png')}
                             alt="Profissional da QueirozTech sorrindo"
                             className="hero__image"
                         />
