@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 import './ContactSection.css'
 
@@ -35,7 +36,7 @@ function ContactSection() {
                         <p className="contact__subtext">
                             Mais de 20 anos melhorando o mercado de <strong>tecnologia</strong>!
                         </p>
-                        <a href="/contato" className="contact__cta">
+                        <Link to="/contato" className="contact__cta">
                             Entrar em contato
                             <svg
                                 className="contact__cta-icon"
@@ -51,7 +52,7 @@ function ContactSection() {
                                     strokeLinejoin="round"
                                 />
                             </svg>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

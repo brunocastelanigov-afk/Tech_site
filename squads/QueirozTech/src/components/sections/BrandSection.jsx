@@ -1,8 +1,10 @@
+import { useState } from 'react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 import './BrandSection.css'
 
 function BrandSection() {
     const { ref: animRef, isVisible } = useScrollAnimation()
+    const [isExpanded, setIsExpanded] = useState(false)
     return (
         <section className={`brand scroll-animate${isVisible ? ' scroll-animate--visible' : ''}`} id="diferencial" ref={animRef}>
             <div className="brand__inner">
@@ -28,21 +30,31 @@ function BrandSection() {
 
                     {/* Descriptive text */}
                     <div className="brand__text">
-                        <p className="brand__description">
-                            Com mais de uma década de atuação em tecnologia e inovação, a Queiroz Tech estrutura soluções estratégicas para organizações que operam em ambientes de alta exigência técnica e regulatória.
-                            <br />
-                            <br />
-                            Atendemos os setores público e privado em todo o Brasil, conectando empresas a distribuidores e fabricantes estratégicos, com suporte de parceiros globais e cadeias de fornecimento consolidadas.
-                            <br />
-                            <br />
-                            Desenvolvemos e executamos projetos complexos com foco em eficiência operacional, governança, conformidade e geração de valor mensurável. Integramos tecnologia, automação e inteligência artificial para transformar estruturas operacionais em ativos estratégicos de crescimento.
-                            <br />
-                            <br />
-                            Atuamos como estruturadores de negócios e soluções, combinando inteligência de mercado, articulação institucional e capacidade técnica para viabilizar projetos de grande escala com segurança e previsibilidade.
-                            <br />
-                            <br />
-                            Mais do que implementar tecnologia, entregamos performance, escalabilidade e vantagem competitiva sustentável.
-                        </p>
+                        <div className={`brand__description${isExpanded ? ' brand__description--expanded' : ''}`}>
+                            <p className="brand__paragraph">
+                                Com mais de uma década de atuação em tecnologia e inovação, a Queiroz Tech estrutura soluções estratégicas para organizações que operam em ambientes de alta exigência técnica e regulatória.
+                            </p>
+                            <p className="brand__paragraph">
+                                Atendemos os setores público e privado em todo o Brasil, conectando empresas a distribuidores e fabricantes estratégicos, com suporte de parceiros globais e cadeias de fornecimento consolidadas.
+                            </p>
+                            <p className="brand__paragraph">
+                                Desenvolvemos e executamos projetos complexos com foco em eficiência operacional, governança, conformidade e geração de valor mensurável. Integramos tecnologia, automação e inteligência artificial para transformar estruturas operacionais em ativos estratégicos de crescimento.
+                            </p>
+                            <p className="brand__paragraph">
+                                Atuamos como estruturadores de negócios e soluções, combinando inteligência de mercado, articulação institucional e capacidade técnica para viabilizar projetos de grande escala com segurança e previsibilidade.
+                            </p>
+                            <p className="brand__paragraph">
+                                Mais do que implementar tecnologia, entregamos performance, escalabilidade e vantagem competitiva sustentável.
+                            </p>
+                        </div>
+                        <button
+                            type="button"
+                            className="brand__toggle"
+                            aria-expanded={isExpanded}
+                            onClick={() => setIsExpanded((prev) => !prev)}
+                        >
+                            {isExpanded ? 'ver menos' : 'ver mais'}
+                        </button>
                     </div>
                 </div>
             </div>

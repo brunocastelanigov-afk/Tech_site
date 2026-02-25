@@ -3,8 +3,6 @@ import './ContactFormPage.css'
 function ContactFormPage() {
     return (
         <main className="contact-form-page">
-            <span className="contact-form-page__line contact-form-page__line--left" />
-            <span className="contact-form-page__line contact-form-page__line--right" />
             <section className="contact-form-page__panel">
                 <img
                     className="contact-form-page__background-logo"

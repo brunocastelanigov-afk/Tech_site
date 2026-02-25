@@ -1,30 +1,26 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
+import { BrowserRouter, useLocation } from 'react-router-dom'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
-import HomePage from './components/pages/HomePage'
-import ContactFormPage from './components/pages/ContactFormPage'
+import AppRoutes from './router'
 
-function App() {
-  const [pathname, setPathname] = useState(window.location.pathname)
-
-  useEffect(() => {
-    const handlePopState = () => setPathname(window.location.pathname)
-    window.addEventListener('popstate', handlePopState)
-    return () => window.removeEventListener('popstate', handlePopState)
-  }, [])
-
+function ScrollToTop() {
+  const { pathname } = useLocation()
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
   }, [pathname])
 
-  const isContactRoute = pathname === '/contato' || pathname === '/contato/'
+  return null
+}
 
+function App() {
   return (
-    <>
+    <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
-      {isContactRoute ? <ContactFormPage /> : <HomePage />}
+      <AppRoutes />
       <Footer />
-    </>
+    </BrowserRouter>
   )
 }
 

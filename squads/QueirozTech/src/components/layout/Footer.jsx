@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Footer.css'
 
 function Footer() {
@@ -16,9 +17,9 @@ function Footer() {
                     </div>
 
                     <div className="footer__header-right">
-                        <a href="/contato" className="footer__cta">
+                        <Link to="/contato" className="footer__cta">
                             Entrar em contato
-                        </a>
+                        </Link>
                         <div className="footer__logo">
                             <img
                                 src="/imgs/QUEIROZTECH_Logo_Preto_letraPreta.svg"
@@ -34,7 +35,7 @@ function Footer() {
                     <div className="footer__column">
                         <h3 className="footer__col-title">Empresa</h3>
                         <ul className="footer__col-list">
-                            <li><a href="/contato">Entre em contato</a></li>
+                            <li><Link to="/contato">Entre em contato</Link></li>
                             <li><a href="#solucoes">Nossas soluções</a></li>
                             <li><a href="#parceiros">Nossos parceiros</a></li>
                             <li><a href="#sobre">Sobre nós</a></li>
@@ -55,7 +56,7 @@ function Footer() {
                     <div className="footer__column">
                         <h3 className="footer__col-title">Fale conosco</h3>
                         <ul className="footer__col-list">
-                            <li><a href="/contato">Contato</a></li>
+                            <li><Link to="/contato">Contato</Link></li>
                             <li>
                                 <a href="mailto:paulo.queiroz@queiroztech.com">
                                     paulo.queiroz@queiroztech.com
