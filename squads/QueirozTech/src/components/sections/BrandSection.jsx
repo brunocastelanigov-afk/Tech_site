@@ -29,7 +29,19 @@ function BrandSection() {
                     {/* Descriptive text */}
                     <div className="brand__text">
                         <p className="brand__description">
-                            Com mais de <strong>1 década</strong> de experiência em tecnologia e inovação, atuamos no <strong>Brasil</strong> e nos <strong>Estados Unidos</strong> conectando empresas a distribuidores e fabricantes estratégicos. Somos especialistas em projetos para o <strong>setor público</strong> e conduzimos consultorias orientadas a resultados, unindo tecnologia, automação e inteligência artificial. Também apoiamos o crescimento do ecossistema por meio da capacidade de <strong>investimento em startups</strong> e iniciativas inovadoras.
+                            Com mais de uma década de atuação em tecnologia e inovação, a Queiroz Tech estrutura soluções estratégicas para organizações que operam em ambientes de alta exigência técnica e regulatória.
+                            <br />
+                            <br />
+                            Atendemos os setores público e privado em todo o Brasil, conectando empresas a distribuidores e fabricantes estratégicos, com suporte de parceiros globais e cadeias de fornecimento consolidadas.
+                            <br />
+                            <br />
+                            Desenvolvemos e executamos projetos complexos com foco em eficiência operacional, governança, conformidade e geração de valor mensurável. Integramos tecnologia, automação e inteligência artificial para transformar estruturas operacionais em ativos estratégicos de crescimento.
+                            <br />
+                            <br />
+                            Atuamos como estruturadores de negócios e soluções, combinando inteligência de mercado, articulação institucional e capacidade técnica para viabilizar projetos de grande escala com segurança e previsibilidade.
+                            <br />
+                            <br />
+                            Mais do que implementar tecnologia, entregamos performance, escalabilidade e vantagem competitiva sustentável.
                         </p>
                     </div>
                 </div>

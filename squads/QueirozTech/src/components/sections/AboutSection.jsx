@@ -20,7 +20,16 @@ function AboutSection() {
                     <span className="about__label">Sobre nós</span>
                     <h2 className="about__headline">QueirozTech</h2>
                     <p className="about__text">
-                        A QueirozTech é uma empresa especializada em consultoria de tecnologia, parcerias estratégicas e investimentos em inovação. Atuamos conectando empresas, distribuidores, fabricantes e startups a um ecossistema completo de modernização, eficiência e crescimento. Nosso compromisso é transformar desafios tecnológicos em oportunidades reais de resultado e escala.
+                        Somos a Queiroz Tech, uma empresa especializada em consultoria estratégica em Tecnologia. Atuamos no desenvolvimento e na comercialização de softwares e soluções digitais inovadoras que impulsionam negócios, aumentam a eficiência e geram resultados reais.
+                    </p>
+                    <p className="about__text">
+                        Nossa missão é entregar estratégia, inovação e parceria. A Queiroz Tech oferece atendimento personalizado que gera economia, performance e crescimento sustentável para o seu negócio.
+                    </p>
+                    <p className="about__text">
+                        Atuamos com as maiores distribuidoras e marcas globais, atestando qualidade aos produtos e serviços ofertados. Temos o compromisso de facilitar a produtividade dos nossos clientes garantindo a segurança necessária e indispensável.
+                    </p>
+                    <p className="about__text">
+                        Os sócios fundadores da Queiroz Tech têm mais de 20 anos de experiência no Setor de TI e Comunicações.
                     </p>
                     <a href="#contato" className="about__cta">
                         Saber mais

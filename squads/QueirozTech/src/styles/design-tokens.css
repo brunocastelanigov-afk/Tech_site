@@ -77,6 +77,12 @@
     --color-navy: #436D8D;
     --color-steel: #5B88AA;
     --color-sky-blue: #68A8DC;
+    --color-form-title: rgb(2, 26, 106);
+    --color-form-subtitle: rgb(128, 128, 128);
+    --color-form-placeholder: rgb(102, 102, 102);
+    --color-form-cta-bg: rgb(107, 212, 217);
+    --color-form-cta-text: rgb(5, 14, 19);
+    --gradient-form-line: linear-gradient(180deg, rgb(106, 238, 171) 0%, rgba(106, 238, 171, 0) 100%);
 
     /* -------------------------------------------------------
      7. COLORS — RGBA / Transparências
