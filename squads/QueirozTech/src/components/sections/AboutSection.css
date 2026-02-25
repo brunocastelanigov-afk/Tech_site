@@ -1,0 +1,203 @@
+/* ============================================================
+   ABOUT SECTION — QueirozTech (div.2)
+   Full-width background image + overlay, text content right
+   ============================================================ */
+
+.about {
+    width: 100%;
+    min-height: 712px;
+    background: var(--color-black);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -------------------------------------------------------
+   Background image + radial gradient overlay
+   ------------------------------------------------------- */
+.about__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.about__bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about__bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(34.34% 45.88% at 22.87% 26.73%,
+            rgba(0, 0, 0, 0.456) 0%,
+            rgba(0, 0, 0, 0.88) 100%);
+}
+
+/* -------------------------------------------------------
+   Inner container
+   ------------------------------------------------------- */
+.about__inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: var(--content-width);
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    padding: 60px 20px;
+}
+
+/* -------------------------------------------------------
+   Secondary image (left)
+   ------------------------------------------------------- */
+.about__image {
+    width: 500px;
+    height: auto;
+    border-radius: 12px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+/* -------------------------------------------------------
+   Text content (right)
+   ------------------------------------------------------- */
+.about__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 567px;
+}
+
+.about__label {
+    font-family: var(--font-primary);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-medium);
+    color: var(--color-gray-light);
+    font-style: italic;
+}
+
+.about__headline {
+    font-family: var(--font-primary);
+    font-size: var(--fs-4xl);
+    font-weight: var(--fw-black);
+    line-height: var(--lh-subtitle);
+    color: var(--color-white);
+    font-style: italic;
+}
+
+.about__text {
+    font-family: var(--font-primary);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-regular);
+    line-height: 28px;
+    color: var(--color-white);
+    font-style: italic;
+}
+
+/* -------------------------------------------------------
+   CTA Button — "Saber mais"
+   ------------------------------------------------------- */
+.about__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 252px;
+    height: 46px;
+    background: linear-gradient(85.07deg,
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(255, 255, 255, 0.08) 50%,
+            rgba(255, 255, 255, 0.15) 100%);
+    box-shadow: var(--shadow-cta);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-primary);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-black);
+    line-height: var(--lh-tight);
+    color: var(--color-cyan-light);
+    text-transform: uppercase;
+    font-style: italic;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 12px;
+}
+
+.about__cta:hover {
+    transform: translateY(-2px);
+    box-shadow: -4px 7px 26px 8px rgba(30, 162, 185, 0.4);
+}
+
+.about__cta-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN (TABLET & MOBILE)
+   ============================================================ */
+
+/* -------------------------------------------------------
+   Tablet (max-width: 1024px)
+   ------------------------------------------------------- */
+@media (max-width: 1024px) {
+    .about {
+        min-height: auto;
+    }
+
+    .about__inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 48px;
+        padding: 60px 20px;
+    }
+
+    .about__image {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .about__content {
+        align-items: center;
+        max-width: 600px;
+    }
+}
+
+/* -------------------------------------------------------
+   Mobile (max-width: 768px)
+   ------------------------------------------------------- */
+@media (max-width: 768px) {
+    .about__inner {
+        gap: 32px;
+        padding: 40px 20px;
+    }
+
+    .about__image {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+    .about__label {
+        font-size: var(--fs-sm);
+    }
+
+    .about__headline {
+        font-size: var(--fs-xl);
+    }
+
+    .about__text {
+        font-size: var(--fs-xs);
+        line-height: var(--lh-relaxed);
+    }
+
+    .about__cta {
+        width: 100%;
+        max-width: 320px;
+        margin-top: 24px;
+    }
+}

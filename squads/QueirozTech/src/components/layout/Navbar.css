@@ -1,0 +1,212 @@
+/* ============================================================
+   NAVBAR — QueirozTech
+   Sticky navigation bar with logo, links, and CTA
+   ============================================================ */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 89px;
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar__inner {
+    width: 100%;
+    max-width: 1140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* -------------------------------------------------------
+   Logo (center)
+   ------------------------------------------------------- */
+.navbar__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar__logo img {
+    width: 156px;
+    height: 72px;
+    object-fit: contain;
+}
+
+/* -------------------------------------------------------
+   Nav Links (left)
+   ------------------------------------------------------- */
+.navbar__links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.navbar__links a {
+    font-family: var(--font-primary);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-snug);
+    color: var(--color-black);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.navbar__links a:hover {
+    color: var(--color-sky-blue);
+}
+
+/* -------------------------------------------------------
+   CTA Button (right)
+   ------------------------------------------------------- */
+.navbar__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 173.77px;
+    height: 40px;
+    background: var(--color-sky-blue);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-primary);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-tight);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.navbar__cta:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* -------------------------------------------------------
+   Mobile Menu Defaults
+   ------------------------------------------------------- */
+.navbar__hamburger {
+    display: none;
+}
+
+.navbar__mobile-menu {
+    display: none;
+}
+
+/* -------------------------------------------------------
+   Mobile (max-width: 768px)
+   ------------------------------------------------------- */
+@media (max-width: 768px) {
+    .navbar__inner {
+        justify-content: space-between;
+    }
+
+    .navbar__links,
+    .navbar__cta {
+        display: none;
+    }
+
+    .navbar__logo {
+        position: static;
+        transform: none;
+    }
+
+    .navbar__hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 1001;
+    }
+
+    .navbar__hamburger-bar {
+        width: 24px;
+        height: 2px;
+        background: var(--color-black);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Hamburger Animation States */
+    .navbar__hamburger-bar.open:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .navbar__hamburger-bar.open:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar__hamburger-bar.open:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .navbar__mobile-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 89px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 89px);
+        background: var(--color-white);
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        z-index: 1000;
+        padding: 40px 20px;
+        pointer-events: none;
+    }
+
+    .navbar__mobile-menu--open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .navbar__mobile-links {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 40px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .navbar__mobile-links a {
+        font-family: var(--font-primary);
+        font-size: var(--fs-md);
+        font-weight: var(--fw-regular);
+        color: var(--color-black);
+        text-decoration: none;
+    }
+
+    .navbar__mobile-cta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 300px;
+        height: 48px;
+        background: var(--color-sky-blue);
+        color: var(--color-white);
+        font-family: var(--font-primary);
+        font-size: var(--fs-sm);
+        font-weight: var(--fw-bold);
+        border-radius: var(--radius-sm);
+        text-decoration: none;
+    }
+}

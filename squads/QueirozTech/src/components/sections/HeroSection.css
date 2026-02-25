@@ -1,0 +1,296 @@
+/* ============================================================
+   HERO SECTION — QueirozTech (div.1)
+   2-column layout: text left, image + decorations right
+   ============================================================ */
+
+.hero {
+    width: 100%;
+    min-height: 669px;
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero__inner {
+    width: 100%;
+    max-width: var(--content-width);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+/* -------------------------------------------------------
+   Text Column (left)
+   ------------------------------------------------------- */
+.hero__text {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    z-index: 2;
+}
+
+.hero__headline {
+    font-family: var(--font-primary);
+    font-size: var(--fs-4xl);
+    font-weight: var(--fw-black);
+    line-height: var(--lh-subtitle);
+    color: var(--color-navy);
+    width: 450px;
+}
+
+.hero__subtitle {
+    font-family: var(--font-primary);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-snug);
+    color: var(--color-gray-subtle);
+    max-width: 420px;
+}
+
+/* -------------------------------------------------------
+   CTA Button
+   ------------------------------------------------------- */
+.hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 252px;
+    height: 46px;
+    background: var(--gradient-cta-btn);
+    box-shadow: var(--shadow-cta);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-primary);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-black);
+    line-height: var(--lh-tight);
+    color: var(--color-teal);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero__cta:hover {
+    transform: translateY(-2px);
+    box-shadow: -4px 7px 26px 8px rgba(30, 162, 185, 0.4);
+}
+
+.hero__cta-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* -------------------------------------------------------
+   Image Column (right) — container for image + decorations
+   ------------------------------------------------------- */
+.hero__visual {
+    position: relative;
+    width: 651px;
+    height: 651px;
+    flex-shrink: 0;
+}
+
+.hero__image {
+    position: relative;
+    z-index: 3;
+    width: 651px;
+    height: 651px;
+    object-fit: contain;
+    filter: drop-shadow(9px 6px 10.1px rgba(0, 0, 0, 0.25));
+}
+
+/* -------------------------------------------------------
+   Decorations — ellipses
+   ------------------------------------------------------- */
+.hero__ellipse {
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero__ellipse--lg {
+    width: 515px;
+    height: 515px;
+    background: var(--color-cyan-light-40);
+    opacity: 0.33;
+}
+
+.hero__ellipse--md {
+    width: 475px;
+    height: 475px;
+    background: var(--color-cyan-light-55);
+    opacity: 0.24;
+}
+
+.hero__ellipse--sm {
+    width: 454px;
+    height: 454px;
+    background: var(--color-cyan-light-65);
+    opacity: 0.24;
+}
+
+/* -------------------------------------------------------
+   Decorations — gradient rectangle
+   ------------------------------------------------------- */
+.hero__gradient-rect {
+    position: absolute;
+    width: 455px;
+    height: 566px;
+    background: linear-gradient(180deg, var(--color-sky-blue) 0%, rgba(104, 168, 220, 0.3) 100%);
+    border-radius: 146px 0px 0px 0px;
+    top: 50%;
+    right: -40px;
+    transform: translateY(-50%);
+    z-index: 1;
+    opacity: 0.4;
+}
+
+/* -------------------------------------------------------
+   Decorations — vertical dots
+   ------------------------------------------------------- */
+.hero__dots {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.hero__dot {
+    width: 7.26px;
+    height: 7.26px;
+    border-radius: 50%;
+    background: var(--color-steel);
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN (TABLET & MOBILE)
+   ============================================================ */
+
+/* -------------------------------------------------------
+   Tablet (769px - 1024px)
+   ------------------------------------------------------- */
+@media (max-width: 1024px) {
+    .hero {
+        min-height: auto;
+        padding: 60px 0;
+    }
+
+    .hero__inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 48px;
+    }
+
+    .hero__text {
+        align-items: center;
+        max-width: 600px;
+    }
+
+    .hero__headline {
+        width: 100%;
+        font-size: var(--fs-3xl);
+    }
+
+    .hero__visual {
+        width: 100%;
+        max-width: 500px;
+        height: 500px;
+    }
+
+    .hero__image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero__ellipse--lg {
+        width: 400px;
+        height: 400px;
+    }
+
+    .hero__ellipse--md {
+        width: 350px;
+        height: 350px;
+    }
+
+    .hero__ellipse--sm {
+        width: 300px;
+        height: 300px;
+    }
+
+    .hero__gradient-rect {
+        display: none;
+    }
+
+    .hero__dots {
+        display: none;
+    }
+}
+
+/* -------------------------------------------------------
+   Mobile (max-width: 768px)
+   ------------------------------------------------------- */
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero__inner {
+        gap: 32px;
+    }
+
+    .hero__text {
+        gap: 16px;
+    }
+
+    .hero__headline {
+        font-size: var(--fs-xl);
+    }
+
+    .hero__subtitle {
+        font-size: var(--fs-xs);
+        /* already small, but ensures it read well */
+    }
+
+    .hero__cta {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .hero__visual {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .hero__image {
+        object-fit: contain;
+    }
+
+    .hero__ellipse--lg {
+        width: 80%;
+        height: 80%;
+    }
+
+    .hero__ellipse--md {
+        width: 70%;
+        height: 70%;
+    }
+
+    .hero__ellipse--sm {
+        width: 60%;
+        height: 60%;
+    }
+}

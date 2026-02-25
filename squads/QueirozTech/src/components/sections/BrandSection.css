@@ -1,0 +1,163 @@
+/* ============================================================
+   BRAND SECTION — QueirozTech (div.6)
+   Two-column: logo left, divider, text right
+   ============================================================ */
+
+.brand {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -------------------------------------------------------
+   Inner container
+   ------------------------------------------------------- */
+.brand__inner {
+    width: 100%;
+    max-width: var(--content-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 40px;
+    gap: 48px;
+}
+
+/* -------------------------------------------------------
+   Section title (decorative)
+   ------------------------------------------------------- */
+.brand__section-title {
+    text-align: center;
+}
+
+.brand__section-label {
+    font-family: var(--font-primary);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-medium);
+    color: var(--color-navy);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.brand__section-heading {
+    font-family: var(--font-primary);
+    font-size: clamp(32px, 3vw, 48px);
+    font-weight: var(--fw-black);
+    line-height: 1.2;
+    color: var(--color-navy);
+}
+
+/* -------------------------------------------------------
+   Content: logo + divider + text
+   ------------------------------------------------------- */
+.brand__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    width: 100%;
+}
+
+/* -------------------------------------------------------
+   Logo
+   ------------------------------------------------------- */
+.brand__logo-wrap {
+    flex-shrink: 0;
+}
+
+.brand__logo {
+    width: clamp(220px, 20vw, 380px);
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(11px 4px 12.3px rgba(0, 0, 0, 0.25));
+}
+
+/* -------------------------------------------------------
+   Vertical divider
+   ------------------------------------------------------- */
+.brand__divider {
+    width: 4px;
+    height: 280px;
+    background: var(--color-black-36);
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+/* -------------------------------------------------------
+   Descriptive text
+   ------------------------------------------------------- */
+.brand__text {
+    max-width: 600px;
+    flex: 1;
+}
+
+.brand__description {
+    font-family: var(--font-primary);
+    font-size: clamp(20px, 2vw, 32px);
+    font-weight: var(--fw-regular);
+    line-height: 1.5;
+    color: var(--color-gray-muted);
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN (TABLET & MOBILE)
+   ============================================================ */
+
+/* -------------------------------------------------------
+   Tablet (max-width: 1024px)
+   ------------------------------------------------------- */
+@media (max-width: 1024px) {
+    .brand__content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .brand__divider {
+        width: 100px;
+        height: 4px;
+        /* Make it horizontal */
+    }
+}
+
+/* -------------------------------------------------------
+   Mobile (max-width: 768px)
+   ------------------------------------------------------- */
+@media (max-width: 768px) {
+    .brand {
+        min-height: auto;
+    }
+
+    .brand__inner {
+        padding: 40px 20px;
+        gap: 32px;
+    }
+
+    .brand__section-heading {
+        font-size: var(--fs-2xl);
+    }
+
+    .brand__content {
+        flex-direction: column;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .brand__logo {
+        width: 180px;
+    }
+
+    .brand__divider {
+        display: none;
+    }
+
+    .brand__text {
+        max-width: 100%;
+    }
+
+    .brand__description {
+        font-size: var(--fs-sm);
+    }
+}

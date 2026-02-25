@@ -1,0 +1,65 @@
+/* ============================================================
+   GLOBAL STYLES — QueirozTech
+   Import design tokens (includes Google Fonts) + CSS Reset
+   ============================================================ */
+
+@import './styles/design-tokens.css';
+
+/* -------------------------------------------------------
+   CSS RESET
+   ------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------------------------------------------------
+   BASE ELEMENTS
+   ------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--color-dark);
+  background: var(--color-white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* -------------------------------------------------------
+   SCROLL OFFSET — compensate for fixed navbar
+   ------------------------------------------------------- */
+section {
+  scroll-margin-top: 89px;
+}
+
+/* -------------------------------------------------------
+   SCROLL ANIMATIONS — fade-in on viewport entry
+   ------------------------------------------------------- */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.scroll-animate--visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}

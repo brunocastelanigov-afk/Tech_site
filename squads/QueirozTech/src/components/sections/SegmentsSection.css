@@ -1,0 +1,248 @@
+/* ============================================================
+   SEGMENTS SECTION — QueirozTech (div.5)
+   Clean white background, carousel with 3 visible slides,
+   arrows on sides, dots below — same style as BrandSection
+   ============================================================ */
+
+.segments {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -------------------------------------------------------
+   Inner container
+   ------------------------------------------------------- */
+.segments__inner {
+    width: 100%;
+    max-width: var(--content-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 40px;
+}
+
+/* -------------------------------------------------------
+   Section header
+   ------------------------------------------------------- */
+.segments__header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.segments__label {
+    font-family: var(--font-primary);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-medium);
+    color: var(--color-navy);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.segments__title {
+    font-family: var(--font-primary);
+    font-size: clamp(32px, 3vw, 48px);
+    font-weight: var(--fw-black);
+    line-height: 1.2;
+    color: var(--color-black);
+}
+
+/* -------------------------------------------------------
+   Carousel wrapper (arrows + slides)
+   ------------------------------------------------------- */
+.segments__carousel-wrap {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+}
+
+/* -------------------------------------------------------
+   Side arrows
+   ------------------------------------------------------- */
+.segments__arrow {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.2s ease;
+}
+
+.segments__arrow:hover {
+    background: rgba(48, 120, 135, 0.06);
+}
+
+.segments__arrow svg {
+    width: 28px;
+    height: 28px;
+    color: var(--color-teal);
+}
+
+/* -------------------------------------------------------
+   Carousel — all 3 slides visible
+   ------------------------------------------------------- */
+.segments__carousel {
+    flex: 1;
+    overflow: hidden;
+}
+
+.segments__track {
+    display: flex;
+    gap: 32px;
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.segments__slide {
+    flex: 0 0 calc((100% - 64px) / 3);
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.segments__slide-image-wrap {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1 / 0.75;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.segments__slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.segments__slide-title {
+    font-family: var(--font-primary);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-extrabold);
+    line-height: var(--lh-normal);
+    color: var(--color-black);
+    margin-bottom: 12px;
+}
+
+.segments__slide-desc {
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: var(--fw-regular);
+    line-height: 1.6;
+    color: var(--color-gray-muted);
+    max-width: 320px;
+}
+
+/* -------------------------------------------------------
+   Dots navigation
+   ------------------------------------------------------- */
+.segments__dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 40px;
+}
+
+.segments__dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-silver);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.segments__dot--active {
+    width: 90px;
+    height: 9px;
+    border-radius: 4.5px;
+    background: var(--color-teal-50);
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN (TABLET & MOBILE)
+   ============================================================ */
+
+/* -------------------------------------------------------
+   Mobile (max-width: 768px)
+   ------------------------------------------------------- */
+@media (max-width: 768px) {
+    .segments__inner {
+        padding: 40px 20px;
+    }
+
+    .segments__title {
+        font-size: var(--fs-2xl);
+    }
+
+    .segments__carousel-wrap {
+        gap: 8px;
+        /* Reduce gap between arrows and carousel */
+        position: relative;
+    }
+
+    .segments__track {
+        --translate-step: 100%;
+        gap: 0;
+        /* No gaps if tracking 100% per step */
+    }
+
+    .segments__slide {
+        flex: 0 0 100%;
+        padding: 0 10px;
+        /* Internal padding instead of gaps */
+    }
+
+    .segments__arrow {
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        /* Float arrows over the carousel to save space */
+        z-index: 10;
+        background: rgba(255, 255, 255, 0.8);
+    }
+
+    .segments__arrow--prev {
+        left: 0;
+    }
+
+    .segments__arrow--next {
+        right: 0;
+    }
+
+    .segments__slide-image-wrap {
+        /* Force full width minus padding for mobile */
+        max-width: 100%;
+        min-height: 200px;
+        /* Keep aspect reasonable */
+    }
+
+    .segments__dots {
+        margin-top: 24px;
+        gap: 6px;
+    }
+
+    .segments__dot {
+        width: 6px;
+        height: 6px;
+    }
+
+    .segments__dot--active {
+        width: 40px;
+        height: 6px;
+        border-radius: 3px;
+    }
+}

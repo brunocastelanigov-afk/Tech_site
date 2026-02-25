@@ -1,0 +1,64 @@
+import { useScrollAnimation } from '../../hooks/useScrollAnimation'
+import './HeroSection.css'
+
+function HeroSection() {
+    const { ref: animRef, isVisible } = useScrollAnimation()
+    // Generate 15 vertical dots
+    const dots = Array.from({ length: 15 }, (_, i) => (
+        <span key={i} className="hero__dot" />
+    ))
+
+    return (
+        <section className={`hero scroll-animate${isVisible ? ' scroll-animate--visible' : ''}`} id="hero" ref={animRef}>
+            <div className="hero__inner">
+                {/* Text Column */}
+                <div className="hero__text">
+                    <h1 className="hero__headline">
+                        TECNOLOGIA FACILIDADE PRODUTIVIDADE
+                    </h1>
+                    <p className="hero__subtitle">
+                        Transformando tecnologia em resultado. Parcerias, consultoria e investimento para acelerar seu negócio.
+                    </p>
+                    <a href="#contato" className="hero__cta">
+                        Entrar em contato
+                        <svg
+                            className="hero__cta-icon"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M1 8H15M15 8L8.5 1.5M15 8L8.5 14.5"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            />
+                        </svg>
+                    </a>
+                </div>
+
+                {/* Image Column + Decorations */}
+                <div className="hero__visual">
+                    {/* Decorations behind image */}
+                    <div className="hero__ellipse hero__ellipse--lg" />
+                    <div className="hero__ellipse hero__ellipse--md" />
+                    <div className="hero__ellipse hero__ellipse--sm" />
+                    <div className="hero__gradient-rect" />
+                    <div className="hero__dots">{dots}</div>
+
+                    {/* Hero image */}
+                    <div className="hero__image-container">
+                        <img
+                            src="/imgs/hero_man_webp.png"
+                            alt="Profissional da QueirozTech sorrindo"
+                            className="hero__image"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+export default HeroSection
